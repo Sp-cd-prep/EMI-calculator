@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+  display: flex;
+  justify-content: center;
+  color: brown;
+}
+form{
+  display: flex;
+  justify-content: center;
+}
+input{
+  background-color: bisque;
+}
+#submit{
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    /* display: inline-block; */
+    outline: none;
+    border: 2px solid #2c0b8e;
+    background: #2c0b8e;
+  position: relative;
+  top:100px;
+  right:440px;
+}
+#submit:hover {
+  background: #fff;
+  color: #2c0b8e
+}
+
+#table{
+  position: relative;
+  top:100px;
+  left:630px;
+}
+
+.history{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  position: relative;
+  top: 150px;
+  /* top:150px;
+  left:650px; */
+}
+#emiResults{
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    <h1>EMI-Calculator</h1>
+    <form id="emiForm">
+      <p>Principal Amount : </p>
+      <input
+        type="number"
+        placeholder="Principal Amount"
+        id="principalAmount"
+      />
+  
+      <p>Rate of Interest : </p>
+      <input
+        type="number"
+        step="0.01"
+        placeholder="Rate of Interest"
+        id="rateOfInterest"
+      />
+      <p>Duration (in months) : </p>
+      <input
+        type="number"
+        placeholder="Duration (in months)"
+        id="duration"
+      />
+      <button id="submit" type="button" onclick="calculateEmi()">Submit</button>
+    </form>
+  
+    <div id="emiResults"></div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
